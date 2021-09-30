@@ -34,15 +34,18 @@ h6 { font-size: 1rem; }
 
 /* custom header styles */
 .header-main {
-  align-self: center;
-  font-size: 3rem;
+  font-size:3rem;
+  width: auto;
+  margin: 0px;
+  padding: 20px;
   color: var(--pink-primary);
-  background-color: var(--blue-secondary);
 }
 
 .header {
   font-size: 2rem;
   color: var(--pink-primary);
+  padding: 50px;
+  background-color: var(--blue-primary);
 }
 
 .sub-header {
@@ -321,21 +324,28 @@ li {
 	background: white;
 }
 
-/*table styles */
 table {
+  width: auto;
+  margin: 0px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 15px;
   border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
 }
 
 td, th {
-  border: 1px solid #999;
-  padding: 0.5rem;
+  padding: 2rem 4.5rem 2rem 4.5rem;
+  border: 0px;
+  margin: 0px;
   text-align: left;
 }
 
 th {
   background-color: var(--pink-primary);
 }
-
 td:hover, th:hover {
   background-color: var(--pink-secondary);
 }
