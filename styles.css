@@ -1,7 +1,9 @@
 /* General Font Styles */
 :root {
-  --color-primary: #FFBAD2;
-  --color-secondary: #fcd7e4;
+  --pink-primary: #FFBAD2;
+  --pink-secondary: #fcd7e4;
+  --blue-primary: #FFBAD2;
+  --blue-secondary: #fcd7e4;
   --standard-width: 80px;
   --standard-height: 60px;
   --button-font-size: 1rem;
@@ -10,6 +12,7 @@
 }
 
 body {
+  background-color: #272838;
   margin: 0px;
   font-size: 16px;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
@@ -29,22 +32,29 @@ h6 { font-size: 1rem; }
 
 .header-main {
   font-size: 2rem;
-  color: #FFBAD2;
+  color: var(--pink-primary);
   background-color: grey;
 }
 
 .header {
+  font-size: 1.6rem;
+  color: var(--pink-primary);
+}
+
+.sub-header {
   font-size: 1.4rem;
-  color: #FFBAD2
+  color: var(--pink-primary);
+  padding: 30px;
+  background-color: #272838;
 }
 
 /* General Link Styles */
 a {
   text-decoration: none;
-  color: var(--color-secondary);
+  color: var(--pink-secondary);
 }
 
-.navbar-right {
+.nav-right {
   background-color: rgb(244, 244, 244);
   display: flex;
   flex-direction: row;
@@ -53,6 +63,23 @@ a {
   padding-right: 50px;
 }
 
+.nav-left {
+  background-color: rgb(244, 244, 244);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.nav-center {
+  background-color: rgb(244, 244, 244);
+  display: flex;
+  flex-direction: row;
+  padding: 0% 10% 0% 10%;
+  justify-content: center;
+  align-items: center;
+}
 /* General List Styles */
 ul {
   display: flex;
@@ -73,9 +100,16 @@ li {
 }
 
 .list-item {
+  font-size: 1.6rem;
   text-decoration: none;
   list-style: none;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 20px;
+}
+
+.list-head {
+  font-weight: 700;
+  color: var(--pink-primary);
+  font-size: 2rem;
 }
 
 /* Button Styles */
@@ -85,7 +119,7 @@ li {
 }
 .confirm {
   font-size: 1.2rem;
-  background-color: var(--color-secondary);
+  background-color: var(--pink-secondary);
   padding: 6px 12px;
   color: black;
   border-style: none;
@@ -94,7 +128,7 @@ li {
 }
 .confirm:hover {
   font-size: 1.2rem;
-  background-color: var(--color-primary);
+  background-color: var(--pink-primary);
   padding: 6px 12px;
   color: black;
   border-style: none;
@@ -143,7 +177,7 @@ li {
   font-size: 1.2rem;
   border-style: none;
   border-radius: 5px;;
-  background-color: #fcd7e4;
+  background-color: var(--pink-secondary);
   padding: 6px 12px;
 }
 
@@ -177,19 +211,19 @@ li {
   left: 0;
   height: 25px;
   width: 25px;
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--pink-secondary);
   background-color: white;
 }
 
 /* On mouse-over, add a grey background color */
 .input-check:hover input ~ .checkmark {
-  background-color: var(--color-secondary);
+  background-color: var(--pink-secondary);
 }
 
 /* When the checkbox is checked, add a blue background */
 .input-check input:checked ~ .checkmark {
   background-color: (var(--color-primary));
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--pink-secondary);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -210,7 +244,7 @@ li {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid var(--color-secondary);
+  border: solid var(--pink-secondary);
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -247,19 +281,19 @@ li {
   height: 25px;
   width: 25px;
   background-color: white;
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--pink-secondary);
   border-radius: 50%;
 }
 
 /* On mouse-over, add a grey background color */
 .input-radio:hover input ~ .radio-button {
-  background-color: var(--color-secondary);
+  background-color: var(--pink-secondary);
 }
 
 /* When the radio button is checked, add a blue background */
 .input-radio input:checked ~ .radio-button {
   background-color: (var(--color-primary));
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--pink-primary);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -272,7 +306,7 @@ li {
 /* Show the indicator (dot/circle) when checked */
 .input-radio input:checked ~ .radio-button:after {
   display: block;
-  background-color: var(--color-primary);
+  background-color: var(--pink-primary);
 }
 
 /* Style the indicator (dot/circle) */
@@ -289,5 +323,5 @@ li {
 .footer {
   padding: 50px;
   background-color: black;
-  color:#FFBAD2;
+  color:var(--pink-secondary);
 }
